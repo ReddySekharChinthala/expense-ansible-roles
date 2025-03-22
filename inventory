@@ -1,5 +1,0 @@
-[db]
-db.rsdevops78s.online
-
-[all:vars]
-ansible_password: DevOps321
