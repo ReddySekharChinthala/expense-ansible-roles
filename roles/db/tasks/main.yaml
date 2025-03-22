@@ -9,6 +9,13 @@
     state: started
     enabled: yes
 
+- name: install mysql python dependenced
+  ansible.builtin.pip:
+    name: 
+    - PyMySQL
+    - cryptography
+  executable: pip3.9
+
 # check already password is already created or setup or not.
 
 - name: check DB connection
@@ -24,6 +31,6 @@
   ansible.builtin.debug: 
     msg: "output: {{ mysql_connection_output }}"
 
-# - name: setup the password
-#   ansible.builtin.command: "mysql_secure_installation --set-root-pass {{ mysql_root_password }}"
-#   when: mysql_connection_output.failed is true
+- name: setup the password
+  ansible.builtin.command: "mysql_secure_installation --set-root-pass {{ mysql_root_password }}"
+  when: mysql_connection_output.failed is true
