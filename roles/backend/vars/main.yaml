@@ -2,3 +2,5 @@ login_user: root
 login_password: ExpenseApp@1
 login_host: db.rsdevops78s.online
 DB_HOST: db.rsdevops78s.online
+app_location: /app
+component: backend
