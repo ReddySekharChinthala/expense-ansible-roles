@@ -16,7 +16,7 @@
     - cryptography
     executable: pip3.9
 
-# check already password is already created or setup or not.
+# check password is already created or setup or not.
 
 - name: check DB connection
   community.mysql.mysql_info:
